@@ -1221,3 +1221,7 @@ width: 100%;
     color: var(--main-color);
     font-weight: 600;
 }
+/* Add this to your style.css file */
+a {
+    color: blue; /* Change this to your desired color */
+}
