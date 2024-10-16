@@ -19,15 +19,15 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-            
-            document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
-        });
-        sec.classList.add('show-animate');
-    }
-    else{
-        sec.classList.remove('show-animate');
+
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+            });
+            sec.classList.add('show-animate');
         }
-        
+        else {
+            sec.classList.remove('show-animate');
+        }
+
     });
 
     let header = document.querySelector('header');
@@ -37,11 +37,11 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 
     let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate',this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 };
 
 
-       var typed = new Typed(".auto-type", {
+var typed = new Typed(".auto-type", {
     strings: [
         "Hidden Costs in E-commerce",
         "Uncover Additional Expenses",
@@ -65,13 +65,12 @@ window.onscroll = () => {
 });
 
 function clearOutput() {
-  // Select the result div
-  var resultDiv = document.querySelector('.scraper-result');
-  
-  // If the result div exists, clear its content
-  if (resultDiv) {
-    resultDiv.innerHTML = '';
-  }
+    // Select the result div
+    var resultDiv = document.querySelector('.scraper-result');
+
+    // If the result div exists, clear its content
+    if (resultDiv) {
+        resultDiv.innerHTML = '';
+    }
 }
 
-    

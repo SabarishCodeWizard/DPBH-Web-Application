@@ -19,15 +19,15 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-            
-            document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
-        });
-        sec.classList.add('show-animate');
-    }
-    else{
-        sec.classList.remove('show-animate');
+
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+            });
+            sec.classList.add('show-animate');
         }
-        
+        else {
+            sec.classList.remove('show-animate');
+        }
+
     });
 
     let header = document.querySelector('header');
@@ -37,26 +37,26 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 
     let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate',this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 };
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var readMoreButton = $("#download");
     var infoFrame = $("#infoFrame");
     infoFrame.hide();
-    readMoreButton.on("click", function(event) {
-      event.preventDefault();
-      console.log("Button clicked");
-      infoFrame.attr("src", "iframe.html");
-      infoFrame.show();
-      $("#home_img").hide();
-      $('html, body').animate({
-        scrollTop: $('#home').offset().top
-      }, 1000);
+    readMoreButton.on("click", function (event) {
+        event.preventDefault();
+        console.log("Button clicked");
+        infoFrame.attr("src", "iframe.html");
+        infoFrame.show();
+        $("#home_img").hide();
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top
+        }, 1000);
     });
-  });
-  
+});
+
 
 
 
